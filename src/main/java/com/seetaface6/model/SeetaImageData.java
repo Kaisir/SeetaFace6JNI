@@ -1,19 +1,9 @@
 package com.seetaface6.model;
 
 /**
- * @author kaisir
+ * @author Kaisir
  */
 public class SeetaImageData {
-
-    public byte[] data;
-    public int width;
-    public int height;
-    public int channels;
-
-    public SeetaImageData() {
-
-    }
-
     public SeetaImageData(int width, int height, int channels) {
         this.data = new byte[width * height * channels];
         this.width = width;
@@ -22,6 +12,11 @@ public class SeetaImageData {
     }
 
     public SeetaImageData(int width, int height) {
-        this(width, height, 3);
+        this(width, height, 1);
     }
+
+    public byte[] data;
+    public int width;
+    public int height;
+    public int channels;
 }

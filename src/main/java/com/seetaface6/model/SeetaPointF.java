@@ -1,9 +1,9 @@
 package com.seetaface6.model;
 
 /**
- * @author kaisir
+ * @author Kaisir
  */
 public class SeetaPointF {
-    public double x;   // 横坐标
-    public double y;   // 纵坐标
+    public double x;
+    public double y;
 }
