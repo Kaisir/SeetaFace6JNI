@@ -13,18 +13,23 @@ public class FaceRecognizer {
     public long impl = 0;
 
     private native void construct(SeetaModelSetting setting);
+
     public FaceRecognizer(SeetaModelSetting setting) {
         this.construct(setting);
     }
 
     public native void dispose();
-    protected void finalize()throws Throwable{
+
+    @Override
+    protected void finalize() throws Throwable {
         super.finalize();
         this.dispose();
     }
 
     public native int GetCropFaceWidth();
+
     public native int GetCropFaceHeight();
+
     public native int GetCropFaceChannels();
 
     public native int GetExtractFeatureSize();
